@@ -1,0 +1,18 @@
+class ResponsesController < ApplicationController
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+end

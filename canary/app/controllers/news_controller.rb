@@ -1,0 +1,15 @@
+class NewsController < ApplicationController
+
+
+
+
+
+
+
+
+
+
+
+
+
+end
