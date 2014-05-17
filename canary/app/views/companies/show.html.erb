@@ -1,0 +1,32 @@
+<h2>Company</h2>
+<ul class="companies">
+      <h4 class="company_name"><%= link_to @company.name, "/companies/#{company.id}" %></h4>
+      <p>
+        <ul class="projects">
+        <% company.projects.each do |project| %>
+          <li class="project_name">
+            <%= link_to project.name, "/projects/#{project.id}" %>
+          </li>
+        <% end %>
+        </ul>
+      </p>
+
+
+<h2 class="company_name"><%= @company.name %></h2>
+
+<p class="company_description">
+  <%= @company.url %>
+</p>
+<h3>Projects</h3>
+
+<ul class="projects">
+  <% @company.projects.order(id: :desc).each do |project| %>
+    <li class="project">
+      <h4><%= project.name %></h4>
+      <p>
+        <%= link_to "show", "/recipes/#{recipe.id}" %> |
+        <%= link_to "edit", "/recipes/#{recipe.id}/edit" %>
+      </p>
+    </li>
+  <% end %>
+</ul>

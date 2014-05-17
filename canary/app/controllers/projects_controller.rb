@@ -47,7 +47,7 @@ def index
   def edit
     @project = Project.find(params[:id])
     # render json: @cookbook
-    # render partial: "projectform", locals: { project_local: @project }
+    render partial: "projectform", locals: { project_local: @project }
   end
 
    def update
