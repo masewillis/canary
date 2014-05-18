@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
 
-
+get "log_out" => "sessions#destroy", :as => "log_out"
+get "log_in" => "sessions#new", :as => "log_in"
+get "sign_up" => "companies#new", :as => "sign_up"
+root :to => "companies#new"
+resources :companies
+resources :sessions
 
 
 
@@ -8,7 +13,7 @@ get '/' => 'home#index'
 
 
 
-  get "/companies" => "companies#index"
+  get "/companies/:company_id/main" => "companies#index"
 
   # show NEW chef form
   get "/company/new" => "companies#new"
@@ -26,7 +31,7 @@ get '/' => 'home#index'
 
 get  "/companies/:id" =>  "companies#show"
 
-get    "/companies/:company_id/projects"           =>     "projects#index"
+# get    "/companies/:company_id/main"           =>         "projects#index"
 post   "/companies/:company_id/projects"           =>     "projects#create"
 get    "/companies/:company_id/projects/new"       =>     "projects#new"
 get    "/companies/:company_id/projects/:id"       =>     "projects#show"
@@ -39,25 +44,28 @@ delete "/companies/:company_id/projects/:id"       =>     "projects#destroy"
 
 get "/projects" => "projects#all"
 
-get "/news" => "news#index"
-
-
-
-#see your project
-
-
-
-
 # #show all projects
 # get "/projects" => "projects#index"
 
 # #shows one project
-# get "/projects/new" => "projects#new"
-# get "/projects/:id" => "projects#show"
-# get "/projects/:id/edit" => "projects#edit"
-# patch "/projects/:id" => "projects#update"
+get "/projects/new" => "projects#new"
+get "/projects/:id" => "projects#show"
+get "/projects/:id/edit" => "projects#edit"
+patch "/projects/:id" => "projects#update"
 
-# post "/projects" => "projects#create"
+post "/projects" => "projects#create"
+
+
+
+
+get "/news" => "news#index"
+
+
+
+
+
+
+
 
 
 

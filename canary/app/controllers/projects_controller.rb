@@ -4,7 +4,7 @@ class ProjectsController < ApplicationController
 def index
     @projects = Project.order(id: :desc)
 
-    @company = Company.find(params[:id])
+    # @company = Company.find(params[:id])
     # @company = current_user
 
     # # current user???!?!!?!?
@@ -41,7 +41,9 @@ def index
 
 
     # when done...
-    redirect_to projects_path
+    # redirect_to projects_path
+    redirect_to "/companies/#{@current_user.id}/index"
+
   end
 
   def edit
@@ -61,7 +63,9 @@ def index
   end
 
   def all
+
     @projects = Project.all
+
   end
 
   private
