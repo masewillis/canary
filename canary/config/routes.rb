@@ -40,9 +40,9 @@ get    "/companies/:company_id/projects/:id"       =>     "projects#show"
 get    "/companies/:company_id/myprojects/:id/edit"  =>     "projects#edit"
 # get  "/companies/:id" =>  "companies#show"
 
-patch  "/companies/:company_id/myprojects/:id"       =>     "projects#update"
+patch  "/companies/:company_id/projects/:id"       =>     "projects#update"
 # put    "/companies/:company_id/projects/:id"       =>     "projects#update"
-delete "/companies/:company_id/myprojects/:id"       =>     "projects#destroy"
+delete "/companies/:company_id/projects/:id"       =>     "projects#destroy"
 
 get "/projects" => "projects#all"
 

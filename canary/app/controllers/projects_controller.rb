@@ -50,17 +50,16 @@ def index
   def edit
     @project = Project.find(params[:id])
     # render json: @cookbook
-    render partial: "projectform", locals: { project_local: @project }
-  end
+    end
 
    def update
 
-    project = Project.find(params[:id])
+    @project = Project.find(params[:id])
 
-    project.update_attributes(project_attributes)
+    @project.update_attributes(project_attributes)
 
     # render json: cookbook
-    redirect_to "compaies/:company_id/myprojects/#{params[:id]}"
+    redirect_to
   end
 
   def all
@@ -68,6 +67,15 @@ def index
     @projects = Project.all
 
   end
+
+ def destroy
+    @project = Project.find(params[:id])
+    @project.destroy
+
+    redirect_to "/companies/#{current_company.id}/myprojects"
+  end
+
+
 
   private
 
