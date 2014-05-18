@@ -2,10 +2,9 @@
         <ul class="projects">
         <% @projects.each do |project| %>
           <li class="project_name">
-            <%= link_to project.name, "/projects/#{project.id}" %>
+            <%= link_to project.name, "/companies/#{project.company_id}/projects/#{project.id}" %>
             <p>
-              <%= link_to "show", "/companies/#{@company.id}/projects/#{project.id}" %> |
-              <%= link_to "edit", "/companies/#{@company.id}/projects/#{project.id}/edit" %>
+              <%= link_to "more", "/companies/#{project.company_id}/projects/#{project.id}" %>
             </p>
 
           </li>

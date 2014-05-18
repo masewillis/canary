@@ -1,6 +1,6 @@
 <h2 class="project_name"><%= @project.name %></h2>
 <p>
-  <%= link_to "edit", "/projects/#{@project.id}/edit" %>
+  <%= link_to "edit", "/companies/#{current_company.id}/myprojects/#{@project.id}/edit" %>
 </p>
 
 <p class="project_company">

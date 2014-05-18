@@ -8,20 +8,7 @@
 </head>
 <body>
 
-  <div id="headcontainer">
-  <header>
-  <h1>Canary</h1>
-    <nav>
-        <%= link_to "Home", "/companies/#{current_company.id}/main" %> |
-        <%= link_to "Companies", "/firms" %> |
-        <%= link_to "Projects", "/projects" %> |
 
-
-        <%= link_to "Services", "/services" %>
-
-        </nav>
-    </header>
-  </div>
 
 
 
@@ -39,6 +26,23 @@
     <%= content_tag :div, msg, :id => "flash_#{name}" %>
   <% end %>
 
+
+
+<div id="headcontainer">
+  <header>
+  <h1>Canary</h1>
+    <nav>
+        <%= link_to "Home", "/companies/#{current_company.id}/main" %> |
+        <%= link_to "Companies", "/firms" %> |
+        <%= link_to "My Projects", "/companies/#{current_company.id}/myprojects" %> |
+        <%= link_to "All Projects", "/projects" %> |
+
+
+        <%= link_to "Services", "/services" %>
+
+        </nav>
+    </header>
+  </div>
 
 <%= yield %>
 

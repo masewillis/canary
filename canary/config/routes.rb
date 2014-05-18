@@ -37,12 +37,12 @@ get "/companies/:company_id/myprojects" => "companies#myprojects"
 post   "/companies/:company_id/myprojects"         =>   "projects#create"
 get    "/companies/:company_id/projects/new"       =>     "projects#new"
 get    "/companies/:company_id/projects/:id"       =>     "projects#show"
-get    "/companies/:company_id/projects/:id/edit"  =>     "projects#edit"
+get    "/companies/:company_id/myprojects/:id/edit"  =>     "projects#edit"
 # get  "/companies/:id" =>  "companies#show"
 
-patch  "/companies/:company_id/projects/:id"       =>     "projects#update"
-put    "/companies/:company_id/projects/:id"       =>     "projects#update"
-delete "/companies/:company_id/projects/:id"       =>     "projects#destroy"
+patch  "/companies/:company_id/myprojects/:id"       =>     "projects#update"
+# put    "/companies/:company_id/projects/:id"       =>     "projects#update"
+delete "/companies/:company_id/myprojects/:id"       =>     "projects#destroy"
 
 get "/projects" => "projects#all"
 
@@ -50,12 +50,12 @@ get "/projects" => "projects#all"
 # get "/projects" => "projects#index"
 
 # #shows one project
-get "/projects/new" => "projects#new"
-get "/projects/:id" => "projects#show"
-get "/projects/:id/edit" => "projects#edit"
-patch "/projects/:id" => "projects#update"
+# get "/projects/new" => "projects#new"
+# get "/projects/:id" => "projects#show"
+# get "/projects/:id/edit" => "projects#edit"
+# patch "/projects/:id" => "projects#update"
 
-post "/projects" => "projects#create"
+# post "/projects" => "projects#create"
 
 
 

@@ -60,7 +60,7 @@ def index
     project.update_attributes(project_attributes)
 
     # render json: cookbook
-    redirect_to "/projects/#{params[:id]}"
+    redirect_to "compaies/:company_id/myprojects/#{params[:id]}"
   end
 
   def all
