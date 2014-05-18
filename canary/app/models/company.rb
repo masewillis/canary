@@ -1,32 +1,52 @@
 class Company < ActiveRecord::Base
 
+
+# mixes in BCrypt modules, etc to existing model
+  include BCrypt
+
+  # validation for unique email
+  # validates(:email, { :uniqueness => true})
+  validates :email, uniqueness: true
+
   has_many :projects
   has_many :responses
 
-  attr_accessible :email, :hashed_password, :password_confirmation
-  attr_accessor :hashed_password
-  before_save :encrypt_password
+  # setter
+  def password= password_input
+    # passes the password_input through BCrypt::Password and hashes it
+    new_password_hash = Password.create(password_input)
+    # new password hash written to database
+    self.hashed_password = new_password_hash
+    self.hashed_password
+  end
 
-  validates_confirmation_of :password
-  validates_presence_of :password, :on => :create
-  validates_presence_of :email, :on => :create
-  validates_uniqueness_of :email
+  # getter
+  def password
+    Password.new(self.hashed_password)
+  end
 
-  def self.authenticate_by_email(email, password)
-    company = find_by_email(email)
-    if company && company.hash_password == BCrypt::Engine.hash_secret(password, company.salt_password)
-      company
+  # check's a password
+  def check_password(password_input)
+    # does the password going in, match the DB pass?
+    password_input == self.password
+  end
+
+  #
+  def self.authenticated?(email_input, password_input)
+    # binding.pry
+    user = Company.find_by_email(email_input)
+    if user && user.password == password_input
+      puts "Authenticated!"
+      return user
     else
-      nil
+      puts "Did not authenticate!"
+      return nil
     end
+    puts "Did not find email"
+    return nil
   end
 
-  def encrypt_password
-    if password.present?
-      self.password_salt = BCrypt::Engine.generate_salt
-      self.password_hash = BCrypt::Engine.hash_secret(password, salt_password)
-    end
-  end
+
 end
 
 

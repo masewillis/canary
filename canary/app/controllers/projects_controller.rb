@@ -4,7 +4,7 @@ class ProjectsController < ApplicationController
 def index
     @projects = Project.order(id: :desc)
 
-
+    @company = Company.find(params[:id])
     # @company = current_user
 
     # # current user???!?!!?!?
@@ -58,6 +58,10 @@ def index
 
     # render json: cookbook
     redirect_to "/projects/#{params[:id]}"
+  end
+
+  def all
+    @projects = Project.all
   end
 
   private

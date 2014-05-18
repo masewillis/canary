@@ -1,28 +1,28 @@
 Rails.application.routes.draw do
 
 
-# resources :companies do
-#   resources :responses
-#   resources :projects do
-#     resources :responses
-# end
-# end
-#   resources :countries do
-#     resources :projects
-#   end
 
-#   resources :minefieds do
-#     resources :projects
-# end
 
-root to: "home#index"
 
-#homepage w login button
-get "/" => "companies#index"
+get '/' => 'home#index'
 
-get "/company/login" => "companies#login"
 
-post "/company/login" => "companies#process_login"
+
+  get "/companies" => "companies#index"
+
+  # show NEW chef form
+  get "/company/new" => "companies#new"
+
+  # process chef CREATE action from form
+  post "/companies" => "companies#create"
+
+  # show LOGIN form
+  get "/company/login" => "companies#login"
+
+  # process login form
+  post "/company/login" => "companies#process_login"
+
+
 
 get  "/companies/:id" =>  "companies#show"
 
@@ -31,12 +31,13 @@ post   "/companies/:company_id/projects"           =>     "projects#create"
 get    "/companies/:company_id/projects/new"       =>     "projects#new"
 get    "/companies/:company_id/projects/:id"       =>     "projects#show"
 get    "/companies/:company_id/projects/:id/edit"  =>     "projects#edit"
+# get  "/companies/:id" =>  "companies#show"
 
 patch  "/companies/:company_id/projects/:id"       =>     "projects#update"
 put    "/companies/:company_id/projects/:id"       =>     "projects#update"
 delete "/companies/:company_id/projects/:id"       =>     "projects#destroy"
 
-
+get "/projects" => "projects#all"
 
 get "/news" => "news#index"
 
