@@ -1,0 +1,14 @@
+
+<h1> <% current_company.cname %> Projects </h1>
+<p>
+        <ul class="projects">
+        <% current_company.projects.each do |project| %>
+          <li class="project_name">
+            <%= link_to project.name, "/projects/#{project.id}" %>
+            <p>
+
+            </p>
+          </li>
+        <% end %>
+        </ul>
+      </p>

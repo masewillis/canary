@@ -6,6 +6,6 @@
   <%= f.text_field :description, {placeholder: "description"} %>
   <%= f.hidden_field :company_id, value: company_id %>
   <%= f.hidden_field :country_id, value: country_id %>
-  <%= f.hidden_field :minefield_id, value: minefield_id %>
+  <%= f.hidden_field :minefield_id, value: current_user.id %>
   <%= f.submit %>
 <% end %>

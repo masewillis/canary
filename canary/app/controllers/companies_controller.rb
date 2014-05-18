@@ -20,6 +20,13 @@ def index
 
 end
 
+def all
+  @companies = Company.all
+end
+
+def myprojects
+
+end
 
 
 private

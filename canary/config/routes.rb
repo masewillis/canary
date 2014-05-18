@@ -8,8 +8,9 @@ resources :companies
 resources :sessions
 
 
-
+#landing page
 get '/' => 'home#index'
+get "/services" => "home#show"
 
 
 
@@ -28,11 +29,12 @@ get '/' => 'home#index'
   post "/company/login" => "companies#process_login"
 
 
-
+get "/firms" => "companies#all"
 get  "/companies/:id" =>  "companies#show"
+get "/companies/:company_id/myprojects" => "companies#myprojects"
 
 # get    "/companies/:company_id/main"           =>         "projects#index"
-post   "/companies/:company_id/projects"           =>     "projects#create"
+post   "/companies/:company_id/myprojects"         =>   "projects#create"
 get    "/companies/:company_id/projects/new"       =>     "projects#new"
 get    "/companies/:company_id/projects/:id"       =>     "projects#show"
 get    "/companies/:company_id/projects/:id/edit"  =>     "projects#edit"

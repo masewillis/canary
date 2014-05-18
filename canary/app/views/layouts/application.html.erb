@@ -12,9 +12,13 @@
   <header>
   <h1>Canary</h1>
     <nav>
-        <%= link_to "Home", cookbooks_path %> |
-        <%= link_to "chefs", chefs_path %>
-        <%= "| Welcome back, #{current_user.name}!" if current_user %>
+        <%= link_to "Home", "/companies/#{current_company.id}/main" %> |
+        <%= link_to "Companies", "/firms" %> |
+        <%= link_to "Projects", "/projects" %> |
+
+
+        <%= link_to "Services", "/services" %>
+
         </nav>
     </header>
   </div>

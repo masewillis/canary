@@ -3,6 +3,10 @@
         <% @projects.each do |project| %>
           <li class="project_name">
             <%= link_to project.name, "/projects/#{project.id}" %>
+            <p>
+              <%= link_to "show", "/companies/#{@company.id}/projects/#{project.id}" %> |
+              <%= link_to "edit", "/companies/#{@company.id}/projects/#{project.id}/edit" %>
+            </p>
 
           </li>
         <% end %>

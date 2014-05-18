@@ -42,7 +42,8 @@ def index
 
     # when done...
     # redirect_to projects_path
-    redirect_to "/companies/#{@current_user.id}/index"
+
+    redirect_to "/companies/#{current_company.id}/myprojects"
 
   end
 
