@@ -46,6 +46,17 @@ delete "/companies/:company_id/projects/:id"       =>     "projects#destroy"
 
 get "/projects" => "projects#all"
 
+
+
+get    "/companies/:company_id/projects/:id"       =>     "responses#show"
+post   "/companies/:company_id/projects/:id"         =>   "responses#create"
+patch   "/companies/:company_id/projects/:id"         =>   "responses#update"
+delete   "/companies/:company_id/projects/:id"         =>   "responses#destroy"
+
+
+
+
+
 # #show all projects
 # get "/projects" => "projects#index"
 

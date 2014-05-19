@@ -18,6 +18,8 @@ def index
   def show
 
     @project = Project.find(params[:id])
+      @response = Response.new
+      @responses = Response.all
 
   end
 
@@ -74,6 +76,13 @@ def index
 
     redirect_to "/companies/#{current_company.id}/myprojects"
   end
+
+
+#   def response
+#    Project.find(params[:id]).responses.create(params[:response])
+#    flash[:notice] = "Added your comment"
+#    redirect_to :action => "show", :id => params[:id]
+# end
 
 
 
