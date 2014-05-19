@@ -1,0 +1,27 @@
+
+
+<h3> list all countries </h3>
+
+
+<h1> <% @country.name %> Countries </h1>
+<p>
+        <ul class="countries">
+        <% @countries.each do |country| %>
+          <li class="country_name">
+            <%= link_to country.name, "/countries/#{country.id}" %>
+            <p>
+                <ul class="projects">
+                <% country.projects.each do |project| %>
+                <li class="project_title">
+                 <%= project.name %>
+                </li>
+                <% end %>
+                </ul>
+            </p>
+          </li>
+        <% end %>
+        </ul>
+      </p>
+
+
+

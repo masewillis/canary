@@ -3,7 +3,8 @@ class CountriesController < ApplicationController
 
 
   def index
-
+    @country = Country.new
+    @countries = Country.order(id: :desc)
   end
 
   def show

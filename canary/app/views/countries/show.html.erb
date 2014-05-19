@@ -2,15 +2,16 @@
 <h2 class="country_name"><%= @country.name %></h2>
 
 
-<h3>Countries</h3>
-<ul class="countries">
-  <% @country.projects.order(id: :desc).each do |project| %>
-    <li class="project">
-      <h4><%= link_to project.name, "/projects/#{project.id}" %></h4>
-      <p>
-        <%= link_to "show", "/projects/#{project.id}" %> |
-        <%= link_to "edit", "/projects/#{project.id}/edit" %>
-      </p>
-    </li>
-  <% end %>
-</ul>
+
+<h4> Oilfields </h4>
+
+
+
+
+
+
+
+<h4> Mines </h4>
+
+
+

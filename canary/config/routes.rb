@@ -26,7 +26,7 @@ get "/services" => "home#show"
   get "/company/login" => "companies#login"
 
   # process login form
-  post "/company/login" => "companies#process_login"
+  # post "/company/login" => "companies#process_login"
 
 
 get "/firms" => "companies#all"
@@ -87,10 +87,10 @@ get "/news" => "news#index"
 
 
 
-get "/country" => "countries#index"
+get "/countries" => "countries#index"
 
 #show one country
-get "/country/:id" => "countries#show"
+get "/countries/:id" => "countries#show"
 
 
 

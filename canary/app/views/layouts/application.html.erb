@@ -31,16 +31,19 @@
 <div id="headcontainer">
   <header>
   <h1>Canary</h1>
+  <% if current_company %>
     <nav>
         <%= link_to "Home", "/companies/#{current_company.id}/main" %> |
         <%= link_to "Companies", "/firms" %> |
         <%= link_to "My Projects", "/companies/#{current_company.id}/myprojects" %> |
         <%= link_to "All Projects", "/projects" %> |
+        <%= link_to "Countries", "/countries" %> |
 
 
         <%= link_to "Services", "/services" %>
 
         </nav>
+        <% end %>
     </header>
   </div>
 

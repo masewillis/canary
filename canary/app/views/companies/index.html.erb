@@ -16,7 +16,7 @@
         <ul class="projects">
         <% current_company.projects.each do |project| %>
           <li class="project_name">
-            <%= link_to project.name, "/projects/#{project.id}" %>
+            <%= link_to project.name, "/companies/#{current_company.id}/projects/#{project.id}" %>
             <p>
 
             </p>
