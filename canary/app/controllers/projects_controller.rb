@@ -78,6 +78,7 @@ def index
   end
 
 
+
 #   def response
 #    Project.find(params[:id]).responses.create(params[:response])
 #    flash[:notice] = "Added your comment"

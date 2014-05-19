@@ -50,8 +50,12 @@ get "/projects" => "projects#all"
 
 get    "/companies/:company_id/projects/:id"       =>     "responses#show"
 post   "/companies/:company_id/projects/:id"         =>   "responses#create"
+get    "/companies/:company_id/projects/:id/edit"  =>     "responses#edit"
 patch   "/companies/:company_id/projects/:id"         =>   "responses#update"
 delete   "/companies/:company_id/projects/:id"         =>   "responses#destroy"
+
+
+get "/services" => "services#index"
 
 
 

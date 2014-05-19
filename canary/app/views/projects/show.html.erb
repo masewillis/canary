@@ -52,9 +52,12 @@
             </p>
              <p>
               Message: <%= response.description %>
+
             </p>
+             <%= link_to "edit", "/companies/#{current_company.id}/projects/#{@project.id}/edit" %> |
+              <%= link_to("Destroy", "/companies/#{current_company.id}/projects/#{params[:id]}", method: :delete) %>
           </li>
         <% end %>
         </ul>
-        <%= link_to("Destroy", "/companies/#{current_company.id}/projects/#{params[:id]}", method: :delete) %>
+
       </p>

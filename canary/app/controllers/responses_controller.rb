@@ -17,14 +17,21 @@ end
 
   end
 
+
+
+    # def edit
+    # @response = Response.find(:company_id)
+    # # render json: @cookbook
+    # end
+
   def destroy
-    @response = Response.find(params[:id])
+    # @response = Response.find(params[:id])
+    # @response.destroy
+
+    # redirect_to
+
+     @response = Response.find(params[:id])
     @response.destroy
-
-    redirect_to
-
-     @project = Project.find(params[:id])
-    @project.destroy
 
     redirect_to "/companies/#{current_company.id}/myprojects"
 
