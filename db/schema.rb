@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140519173628) do
+ActiveRecord::Schema.define(version: 20140520011834) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,8 +27,15 @@ ActiveRecord::Schema.define(version: 20140519173628) do
   end
 
   create_table "countries", force: true do |t|
-    t.string "name"
-    t.string "url"
+    t.string  "name"
+    t.string  "url"
+    t.integer "total_oil"
+    t.integer "oil_export"
+    t.integer "refinery"
+    t.integer "reserves"
+    t.integer "corruption"
+    t.string  "description"
+    t.string  "minerals"
   end
 
   create_table "minefields", force: true do |t|
@@ -37,6 +44,9 @@ ActiveRecord::Schema.define(version: 20140519173628) do
     t.string  "type"
     t.integer "country_id"
     t.string  "kind"
+    t.integer "output"
+    t.string  "description"
+    t.string  "oil_reserves"
   end
 
   create_table "projects", force: true do |t|

@@ -32,6 +32,7 @@ gem 'pry'
 gem 'bcrypt', :require=>'bcrypt'
 
 gem 'rails_12factor'
+require 'feedjira'
 
 # Use unicorn as the app server
 # gem 'unicorn'

@@ -14,7 +14,7 @@
 
   <div id="company_nav">
     <% if current_company %>
-      Logged in as <%= current_company.email %>.
+      Logged in: <%= current_company.email %>.
       <%= link_to "Log out", log_out_path %>
     <% else %>
       <%= link_to "Sign up", sign_up_path %> or
