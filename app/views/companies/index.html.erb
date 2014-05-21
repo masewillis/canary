@@ -1,23 +1,53 @@
 
 
+<div class = "section group">
+
+   <div class = "col span_1_of_2">
+<h3> <%= "World News" %></h3>
+
+  <div class="news">
+  <ul>
+  <% @worldarticles.entries.each do |entry| %>
+  <li>
+  <%= link_to entry.title, "#{entry.url}" %>
+  <% end %>
+</li>
+</ul>
+
+  </div>
+</div>
 
 
-<h2> <%= "news" %></h2>
+  <div class = "col span_1_of_2">
+<h3> <%= "Oil and Gas Industry - Upstream" %></h3>
 
-  <%= @summary %>
+  <div class="news">
+  <ul>
+  <% @articles.entries.each do |entry| %>
+  <li>
+  <%= link_to entry.title, "#{entry.url}" %>
+  <% end %>
+</li>
+</ul>
+
+  </div>
+</div>
 
 
+<div class = "col span_1_of_2">
+<h3> <%= "Mining News" %> </h3>
 
-<h1> <% current_company.cname %> Projects </h1>
-<p>
-        <ul class="projects">
-        <% current_company.projects.each do |project| %>
-          <li class="project_name">
-            <%= link_to project.name, "/companies/#{current_company.id}/projects/#{project.id}" %>
-            <p>
+  <div class="news">
+  <ul>
+  <% @minearticles.entries.each do |entry| %>
+  <li>
+  <%= link_to entry.title, "#{entry.url}" %>
+  <% end %>
+</li>
+</ul>
 
-            </p>
-          </li>
-        <% end %>
-        </ul>
-      </p>
+  </div>
+</div>
+
+
+</div>

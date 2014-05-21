@@ -21,10 +21,15 @@ def index
       @response = Response.new
       @responses = Response.all
 
+
+
+
+
   end
 
   def new
     @project = Project.new
+
 
   end
 

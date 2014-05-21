@@ -3,6 +3,8 @@ class ResponsesController < ApplicationController
 
 def show
   @response = Response.find(params[:id])
+@cname = Company.find(:company_id).cname
+# @cname = Company.find(response.company_id).cname
 end
 
 
@@ -17,6 +19,11 @@ end
 
   end
 
+  def edit
+    @response_id = Response.id
+    @response = Response.find(@response_id)
+
+  end
 
 
     # def edit

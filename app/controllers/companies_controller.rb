@@ -9,16 +9,23 @@ end
 def create
   @company = Company.new(company_params)
   if @company.save
-    redirect_to root_url, :notice => "Signed up!"
+    redirect_to "/login", :notice => "Signed up!"
   else
     render "new"
   end
+
 end
 
 
 def index
-  @feeds = Feedjira::Feed.fetch_and_parse("http://www.worldoil.com/Rss_Feed.aspx?PLink=WODN")
-  @summary = @feeds.entries.last.summary
+  @worldfeeds = Feedjira::Feed.fetch_and_parse("http://feeds.bbci.co.uk/news/world/rss.xml#")
+  @worldarticles = @worldfeeds.entries.first(15)
+
+  @oilfeeds = Feedjira::Feed.fetch_and_parse("http://www.worldoil.com/Rss_Feed.aspx?PLink=WODN")
+  @articles = @oilfeeds.entries.first(15)
+
+  @minefeeds = Feedjira::Feed.fetch_and_parse("http://www.miningweekly.com/page/breaking-news/feed")
+  @minearticles = @minefeeds.entries.first(15)
 end
 
 def all
@@ -32,7 +39,7 @@ end
 
 private
     def company_params
-      params.require(:company).permit(:email, :password, :password_confirmation)
+      params.require(:company).permit(:cname, :name, :title, :email, :password, :password_confirmation)
     end
 
 

@@ -4,17 +4,17 @@
 <h2>Companies</h2>
 <ul class="companies">
   <% @companies.each do |company| %>
-    <li>
+
       <h4 class="company_name"><%= company.cname %></h4>
       <p>
-        <ul class="projects">
+        <div class="projects">
         <% company.projects.each do |project| %>
-          <li class="project_title">
+          <div class="project_title">
             <%= project.name %>
-          </li>
+
         <% end %>
         </ul>
       </p>
-    </li>
+    </div>
   <% end %>
 </ul>

@@ -5,7 +5,8 @@
 
 <h1> <% @country.name %> Countries </h1>
 <p>
-        <ul class="countries">
+    <div class ="countries">
+        <ul>
         <% @countries.each do |country| %>
           <li class="country_name">
             <%= link_to country.name, "/countries/#{country.id}" %>
@@ -21,6 +22,7 @@
           </li>
         <% end %>
         </ul>
+      </div>
       </p>
 
 

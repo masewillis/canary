@@ -1,8 +1,39 @@
 
 
 body {
-  /*background-color: black;
-  color: white;*/
+  background: url("oilref.jpg");
+  background-size: cover;
+  background-repeat: no-repeat
+}
+
+.homepage {
+  background: url("http://images.nationalgeographic.com/wpf/media-live/photos/000/035/cache/oil-refinery-abercrombie_3545_990x742.jpg");
+  background-size: cover;
+  background-repeat: no-repeat
 }
 
 
+
+
+.news ul li {
+  list-style: none;
+}
+
+.projects li {
+  list-style: none;
+}
+
+#company_nav {
+  text-align: right;
+  padding: 10px;
+
+}
+
+
+#headcontainer {
+  margin-top: -150px;
+}
+
+.countries ul {
+  list-style: none;
+}

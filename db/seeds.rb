@@ -20,237 +20,90 @@
 #   description: "infrastructure development"
 #   })
 
-countries = Country.create({
-  name: "United States",
-  total_oil: 2,
-  oil_export: 2,
-  refinery: 2,
-  reserves: 2,
-  corruption: 2,
-  minerals: "asd"
-  })
 
 countries = Country.create({
   name: "Saudi Arabia",
-  total_oil: 2,
-  oil_export: 2,
-  refinery: 2,
-  reserves: 2,
-  corruption: 2,
-  minerals: "qwe"
-  })
-
-countries = Country.create({
-  name: "Mexico",
-  total_oil: 2,
-  oil_export: 2,
-  refinery: 2,
-  reserves: 2,
-  corruption: 2,
-  minerals: "qwe"
-  })
-
-countries = Country.create({
-  name: "Venezuela",
-  total_oil: 2,
-  oil_export: 2,
-  refinery: 2,
-  reserves: 2,
-  corruption: 2,
-  minerals: "qwe"
+  total_oil: 11725,
+  oil_export: 8448,
+  refinery: 2080,
+  reserves: 268,
+  corruption: 46,
+  minerals: "gold, silver, copper, zinc"
   })
 
 countries = Country.create({
   name: "Russia",
-  total_oil: 2,
-  oil_export: 2,
-  refinery: 2,
-  reserves: 2,
-  corruption: 2,
-  minerals: "qwe"
-  })
-
-countries = Country.create({
-  name: "Nigeria",
-  total_oil: 2,
-  oil_export: 2,
-  refinery: 2,
-  reserves: 2,
-  corruption: 2,
-  minerals: "qwe"
+  total_oil: 10396,
+  oil_export: 7124,
+  refinery: 5431,
+  reserves: 80,
+  corruption: 28,
+  minerals: "aluminum, bauxite, diamond, copper, cobalt"
   })
 
 countries = Country.create({
   name: "Iraq",
-  total_oil: 2,
-  oil_export: 2,
-  refinery: 2,
-  reserves: 2,
-  corruption: 2,
-  minerals: "qwe"
-  })
-
-countries = Country.create({
-  name: "Iraq",
-  total_oil: 2,
-  oil_export: 2,
-  refinery: 2,
-  reserves: 2,
-  corruption: 2,
-  minerals: "qwe"
-  })
-
-
-countries = Country.create({
-  name: "South Africa",
-  total_oil: 2,
-  oil_export: 2,
-  refinery: 2,
-  reserves: 2,
-  corruption: 2,
-  minerals: "qwe"
+  total_oil: 2986,
+  oil_export: 1908,
+  refinery: 638,
+  reserves: 141,
+  corruption: 16,
+  minerals: "phosphate rock, salt, sulfur"
   })
 
 countries = Country.create({
   name: "Brazil",
-  total_oil: 2,
-  oil_export: 2,
-  refinery: 2,
-  reserves: 2,
-  corruption: 2,
-  minerals: "qwe"
-  })
-
-countries = Country.create({
-  name: "China",
-  total_oil: 2,
-  oil_export: 2,
-  refinery: 2,
-  reserves: 2,
-  corruption: 2,
-  minerals: "qwe"
+  total_oil: 2651,
+  oil_export: -36,
+  refinery: 1908,
+  reserves: 13,
+  corruption: 42,
+  minerals: "gold, copper, tin, iron, bauxite"
   })
 
 
-countries = Country.create({
-  name: "Democratic Republic of Congo",
-  total_oil: 2,
-  oil_export: 2,
-  refinery: 2,
-  reserves: 2,
-  corruption: 2,
-  minerals: "qwe"
+
+
+
+minefields = Minefield.create({
+  name: "Ghawar Field",
+  kind: "oilfield",
+  country_id: 16,
+  output: 5000000,
+  oil_reserves: 71000
   })
-
-
 
 
 minefields = Minefield.create({
   name: "Samotlor Field",
   kind: "oilfield",
-  country_id: 5,
-  output: 2,
-  oil_reserves: 2
+  country_id: 17,
+  output: 750000,
+  oil_reserves: 4
   })
 
-
 minefields = Minefield.create({
-  name: "field",
+  name: "Rumaila Field",
   kind: "oilfield",
-  country_id: 5,
-  output: 2,
-  oil_reserves: 2
+  country_id: 18,
+  output: 960000,
+  oil_reserves: 17000
   })
 
-minefields = Minefield.create({
-  name: "asdf",
-  kind: "oilfield",
-  country_id: 6,
-  output: 2,
-  oil_reserves: 2
-  })
 
 minefields = Minefield.create({
-  name: "qwer",
-  kind: "oilfield",
-  country_id: 7,
-  output: 2,
-  oil_reserves: 2
-  })
-
-minefields = Minefield.create({
-  name: "qwetgh",
+  name: "Carajas Mine",
   kind: "mine",
-  country_id: 8,
-  output: 2,
-  oil_reserves: 2
-  })
-
-minefields = Minefield.create({
-  name: "Rsdfga",
-  kind: "oilfield",
-  country_id: 9,
-  output: 2,
-  oil_reserves: 2
-  })
-
-minefields = Minefield.create({
-  name: "Nisdfgia",
-  kind: "oilfield",
-  country_id: 10,
-  output: 1,
-  oil_reserves: 2
-  })
-
-minefields = Minefield.create({
-  name: "Isfdgq",
-  kind: "mine",
-  country_id: 11,
-  output: 2,
-  oil_reserves: 2
-  })
-
-minefields = Minefield.create({
-  name: "Iqwerq",
-  kind: "oilfield",
-  country_id: 13,
-  output: 2,
-  oil_reserves: 2
+  country_id: 19,
+  output: 510,
+  oil_reserves: 0
   })
 
 
-minefields = Minefield.create({
-  name: "Sqwera",
-  kind: "oilfield",
-  country_id: 9,
-  output: 2,
-  oil_reserves: 2
-  })
-
-minefields = Minefield.create({
-  name: "qwerl",
-  kind: "mine",
-  country_id: 13,
-  output: 2,
-  oil_reserves: 2
-  })
-
-minefields = Minefield.create({
-  name: "Cqwer",
-  kind: "oilfield",
-  country_id: 16,
-  output: 2,
-  oil_reserves: 2
-  })
 
 
-minefields = Minefield.create({
-  name: "Dqwer",
-  kind: "mine",
-  country_id: 16,
-  output: 2,
-  oil_reserves: 2
-  })
+
+
 
 
 
