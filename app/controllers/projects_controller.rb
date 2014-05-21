@@ -21,7 +21,7 @@ def index
       @response = Response.new
       @responses = Response.all
 
-
+      @cname = Company.find(params[:company_id]).cname
 
 
 

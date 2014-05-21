@@ -15,6 +15,9 @@
 
 
   <div id="company_nav">
+    <header>
+    <img src="/assets/eagleblackbg.png" />
+   </header>
     <% if current_company %>
       <%= current_company.email %>.
       <%= link_to "Log out", log_out_path %>
@@ -30,24 +33,39 @@
 
 
 
-<div id="headcontainer">
-  <header>
-  <h1>Canary</h1>
+
+
+
+
+
+
+<div id='cssmenu'>
   <% if current_company %>
-    <nav>
-        <%= link_to "Home", "/companies/#{current_company.id}/main" %> |
-        <%= link_to "Companies", "/firms" %> |
-        <%= link_to "My Projects", "/companies/#{current_company.id}/myprojects" %> |
-        <%= link_to "All Projects", "/projects" %> |
-        <%= link_to "Countries", "/countries" %> |
+<ul>
+   <li class='active'><%= link_to "Home", "/companies/#{current_company.id}/main" %></li>
+   <li><%= link_to "Companies", "/firms" %></li>
+   <li><%= link_to "My Projects", "/companies/#{current_company.id}/myprojects" %></li>
+    <li><%= link_to "All Projects", "/projects" %></li>
+    <li><%= link_to "Countries", "/countries" %></a></li>
+   <li class='last'><%= link_to "Services", "/services" %></li>
+</ul>
+<% end %>
+</div>
 
 
-        <%= link_to "Services", "/services" %>
 
-        </nav>
-        <% end %>
-    </header>
-  </div>
+
+
+
+
+
+
+
+
+
+
+
+
 
 <%= yield %>
 

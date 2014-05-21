@@ -6,7 +6,7 @@
 </p>
 
 <p class="project_company">
-  Company: <%= @project.company_id %>
+  Company: <%= @cname %>
 </p>
 <p class="project_country">
   Country: <%= @project.country_id %>
@@ -48,7 +48,7 @@
               <%= response.title %>
             </p>
              <p>
-              By: <%= response.company_id %> <%= @cname %>
+              By: <% response.company_id %>
             </p>
              <p>
               Message: <%= response.description %>

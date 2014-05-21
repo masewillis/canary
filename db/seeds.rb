@@ -23,6 +23,7 @@
 
 countries = Country.create({
   name: "Saudi Arabia",
+
   total_oil: 11725,
   oil_export: 8448,
   refinery: 2080,
@@ -33,6 +34,7 @@ countries = Country.create({
 
 countries = Country.create({
   name: "Russia",
+
   total_oil: 10396,
   oil_export: 7124,
   refinery: 5431,
@@ -43,6 +45,7 @@ countries = Country.create({
 
 countries = Country.create({
   name: "Iraq",
+
   total_oil: 2986,
   oil_export: 1908,
   refinery: 638,
@@ -53,6 +56,7 @@ countries = Country.create({
 
 countries = Country.create({
   name: "Brazil",
+
   total_oil: 2651,
   oil_export: -36,
   refinery: 1908,
@@ -67,6 +71,7 @@ countries = Country.create({
 
 minefields = Minefield.create({
   name: "Ghawar Field",
+  url:
   kind: "oilfield",
   country_id: 16,
   output: 5000000,
@@ -76,6 +81,7 @@ minefields = Minefield.create({
 
 minefields = Minefield.create({
   name: "Samotlor Field",
+  url:
   kind: "oilfield",
   country_id: 17,
   output: 750000,
@@ -84,6 +90,7 @@ minefields = Minefield.create({
 
 minefields = Minefield.create({
   name: "Rumaila Field",
+  url:
   kind: "oilfield",
   country_id: 18,
   output: 960000,
@@ -93,6 +100,7 @@ minefields = Minefield.create({
 
 minefields = Minefield.create({
   name: "Carajas Mine",
+  url:
   kind: "mine",
   country_id: 19,
   output: 510,

@@ -108,7 +108,7 @@ line-height : 1.4;
 
 
 h2 {
-color: white;
+color: red;
 margin-bottom : .5em;
 margin-top : .5em;
 font-size : 2.75em; /* 40 / 16 */
@@ -116,7 +116,7 @@ line-height : 1.2;
 }
 
 h3 {
-color: white;
+color: red;
 margin-bottom : 0.3em;
 letter-spacing: -1px;
 font-size : 1.75em; /* 28 / 16 */
