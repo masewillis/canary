@@ -2,6 +2,7 @@ class SessionsController < ApplicationController
 
 
 def new
+
 end
 
 def create
@@ -19,7 +20,7 @@ end
 
 def destroy
   session[:company_id] = nil
-  redirect_to root_url, :notice => "Logged out!"
+  redirect_to "/", :notice => "Logged out!"
 end
 
 end

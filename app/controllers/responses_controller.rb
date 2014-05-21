@@ -20,8 +20,13 @@ end
   end
 
   def edit
+      # if current_user.id = Response.company_id
+
+
     @response_id = Response.id
     @response = Response.find(@response_id)
+
+
 
   end
 

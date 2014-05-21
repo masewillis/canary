@@ -9,7 +9,7 @@ end
 def create
   @company = Company.new(company_params)
   if @company.save
-    redirect_to "/login", :notice => "Signed up!"
+    redirect_to "/log_in", :notice => "Signed up!"
   else
     render "new"
   end

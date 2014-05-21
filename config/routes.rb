@@ -35,7 +35,7 @@ get "/services" => "home#show"
   post "/companies" => "companies#create"
 
   # show LOGIN form
-  get "/company/login" => "companies#login"
+  # get "/company/login" => "companies#login"
 
   # process login form
   # post "/company/login" => "companies#process_login"
