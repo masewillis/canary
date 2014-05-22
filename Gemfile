@@ -31,7 +31,7 @@ gem 'pry'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', :require=>'bcrypt'
 
-gem 'rails_12factor'
+gem 'rails_12factor', group: :production
 gem 'feedjira'
 
 # Use unicorn as the app server
