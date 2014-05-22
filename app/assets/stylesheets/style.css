@@ -3,7 +3,7 @@
 
 
 body {
-  background: url("/images/oilref.jpg");
+  background: url("");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -30,7 +30,7 @@ form input {
 }
 
 .homepage {
-  background: url("/images/oilref.jpg");
+  background: url("");
   background-size: cover;
   background-repeat: no-repeat;
 }
