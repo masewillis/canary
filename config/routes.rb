@@ -21,6 +21,8 @@ resources :sessions
 #landing page
 get '/' => 'home#index'
 get "/services" => "home#show"
+get "/admin" => "admin#new"
+get "/admin" => "admin#create"
 
 
 
